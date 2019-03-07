@@ -1,0 +1,14 @@
+{
+  "name": "slides",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck presentation.mdx"
+  },
+  "devDependencies": {
+    "mdx-deck": "^1.10.0",
+    "mdx-deck-code-surfer": "^0.5.5",
+    "raw-loader": "^1.0.0"
+  }
+}
