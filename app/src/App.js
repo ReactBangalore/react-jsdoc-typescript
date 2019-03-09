@@ -1,28 +1,60 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+// @ts-check
+import React, { Component } from "react"
+import logo from "./logo.svg"
+import "./App.css"
 
+/**
+ * @typedef {Object} Props
+ * @property {string} initialValue
+ */
+
+/**
+ * @typedef {Object} State
+ * @property {string} description
+ */
+
+const initialState = Object.freeze({
+  description: "subramanya"
+})
+
+/**
+ * @extends {Component<Props, State>}
+ */
 class App extends Component {
+  state = {
+    description: "subramanya"
+  }
+
+  /**
+   * @param {import("react").ChangeEvent<HTMLInputElement>} event
+   */
+  handleChange = event => {
+    const { value } = event.target
+    this.setState(() => ({ description: value }))
+  }
+
+  /**
+   * @param {import("react").FormEvent<HTMLFormElement>} event
+   */
+  handleSubmit = event => {
+    event.preventDefault()
+    const { description } = this.state
+    console.log(description, "yay form submitted")
+  }
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
+        <section>
+          <form onSubmit={this.handleSubmit}>
+            <input onChange={this.handleChange} />
+          </form>
+        </section>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
