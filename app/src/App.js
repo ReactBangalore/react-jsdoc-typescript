@@ -2,6 +2,8 @@
 import React, { Component } from "react"
 import logo from "./logo.svg"
 import "./App.css"
+import Form from "./Form"
+import FriendStatus from "./FriendStatus"
 
 /**
  * @typedef {Object} Props
@@ -49,8 +51,13 @@ class App extends Component {
         </header>
         <section>
           <form onSubmit={this.handleSubmit}>
-            <input onChange={this.handleChange} />
+            <input
+              onChange={this.handleChange}
+              value={this.state.description}
+            />
+            <Form name={"React"} />
           </form>
+          <FriendStatus />
         </section>
       </div>
     )
