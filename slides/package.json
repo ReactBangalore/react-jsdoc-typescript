@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "mdx-deck presentation.mdx",
-    "build": "mdx-deck build deck.mdx"
+    "build": "mdx-deck build presentation.mdx"
   },
   "devDependencies": {
     "mdx-deck": "^1.10.0",
