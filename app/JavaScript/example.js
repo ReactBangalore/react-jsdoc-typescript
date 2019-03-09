@@ -23,7 +23,7 @@ let person = {
 
 // Object type by property
 /**
- * @typedef {Object<String, any>} Car
+ * @typedef {Object} Car
  * @property {string} model
  * @property {number} make
  */

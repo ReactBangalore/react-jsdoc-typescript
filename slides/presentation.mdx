@@ -37,6 +37,12 @@ Software Developer **👨‍💻** @CoWrks
 
 # Why?
 
+<img src={"./assets/satan-hail.webp"} width={500} />
+
+---
+
+# Why?
+
 <ul>
   <Appear>
     <li> Early detection of type errors</li>
@@ -54,6 +60,12 @@ Software Developer **👨‍💻** @CoWrks
   me why? I can't say out of curiosity as a reason and went back to know
   reasons. So here are the reasons
 </Notes>
+
+---
+
+# Comparison
+
+![comparision](./assets/type-comparision.png)
 
 ---
 
@@ -236,8 +248,8 @@ class Person {
 }
 
 const guy = new Person({
-  name: Sam,
-  age: 32
+  name: "Subramanya",
+  age: 25
 })
 guy.sayName()
 ```
@@ -260,7 +272,7 @@ JsDoc for classes
 /**
  * @type {Options} opts
  */
-const opts = { firstName: "Joe", lastName: "Bodoni", age: 32 }
+const opts = { firstName: "Subramanya", lastName: "Chakravarthy", age: 25 }
 ```
 
 ---
@@ -380,46 +392,16 @@ const btn = document.createElement('button')
 
 ---
 
-export default FullScreenCode
+### You can import from another file
 
 ```javascript
 /**
- * Props define attributes on a virtual node.
- * @typedef {Object.<string, any> | {}} Props
- * @property {Children} Props.children
+ * @param {import("react").ChangeEvent<HTMLInputElement>} event
  */
-/**
- * The vnode children of a virtual node.
- * @typedef {VNode[]} Children
- */
-/**
- * Define a custom type for virtual nodes:
- * @typedef {string | number | Function} Type
- * @typedef {Object.<string, any>} VNode
- * @property {Type} VNode.type
- * @property {Props} VNode.props
- * @property {Children} VNode.children
- * @property {Key} [VNode.key]
- */
-```
-
----
-
-You can import from another file
-
-```javascript
-import { createVNode } from '../vnode'
-/**
-* @typedef {import('./vnode').VNode} VNode
-*/
-
-// Some code that create options for createVNode to use.
-const options = ...
-/**
-* @param {Object<string, any>} options
-* @return {VNode} VNode
-*/
-const vnode = createVNode(options)
+handleChange = event => {
+  const { value } = event.target
+  this.setState(() => ({ description: value }))
+}
 ```
 
 ---
@@ -438,14 +420,20 @@ const price = 12 // or '12'
  * @type {{name: string}, {age: number}}
  */
 const person = {
-  name: "Joe",
-  age: 32
+  name: "Subramanya",
+  age: 25
 }
 ```
 
 ---
 
-### Let's Dig into react
+### Let's Do Live Coding
+
+---
+
+### Summary
+
+![JSDoc](./assets/summary.png)
 
 ---
 
